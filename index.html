@@ -10,8 +10,15 @@
 </head>
 
 <body>
+  <script>
+    document.addEventListener('click', musicPlay);
+function musicPlay() {
+    document.getElementById('playAudio').play();
+    document.removeEventListener('click', musicPlay);
+}
+  </script>
   <main class="container">
-    <audio autoplay="true" src="./assets/We're All In This Together.mp3"></audio>
+    <audio src="./assets/We're All In This Together.mp3" id="playAudio"></audio>
     <div class="title">
       <h1>Search the Internet</h1>
     </div>
